@@ -29,6 +29,8 @@ function searchResult(){
                 document.getElementById("search-result").appendChild(searchResults);
                 }
         
+    }).catch(function() {
+        console.log("error");
     });
 }
 
@@ -49,5 +51,7 @@ function putLyrics(artist,title){
         p.innerText+=data.lyrics;
         lyrics.appendChild(p);
         document.getElementById("addLyrics").appendChild(lyrics);
+    }).catch(function() {
+        console.log("error");
     });
 }
